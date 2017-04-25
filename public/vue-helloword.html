@@ -9,8 +9,13 @@
 <div id="app">
     {{ message }}
     <input name="message" v-model="message">
-</div>
 
+    <p v-if="seen">现在你看到我了</p>
+
+    <ul>
+        <li v-for="item in listData">{{item}}</li>
+    </ul>
+</div>
 
 
 <script src="../node_modules/vue/dist/vue.js"></script>
