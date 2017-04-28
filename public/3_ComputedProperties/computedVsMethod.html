@@ -14,8 +14,10 @@
     {{ message2 }}
     <input name="message2" v-model="message2">
 
-    <p>Computed: {{ message2 + ' - ' + messageLength1 }}</p>
-    <p>Method: {{ message2 + ' - '+ messageLength2() }}</p>
+    <p>Computed (Cached): {{ message2 + ' - ' + messageLength1 }}</p>
+    <p>Method (Not cached): {{ message2 + ' - '+ messageLength2() }}</p>
+
+    <button @click="messageLength1">Call Fn In Computed</button> <!-- throws error! -->
 
 </div>
 

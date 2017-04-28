@@ -9,14 +9,16 @@ var app = new Vue({
             message2: '',
         },
         computed: {
+            // Cached, execute if only the model changes.
             messageLength1: function () {
-                console.log('Computed !');
+                console.log('Computed @ ' + new Date().toString());
                 return this.message.length;
             }
         },
         methods: {
+            // Execute every time
             messageLength2: function () {
-                console.log('Method !');
+                console.log('Method @ ' + new Date().toString());
                 return this.message.length;
             }
         }
