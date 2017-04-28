@@ -14,6 +14,7 @@ var app = new Vue({
         el: '#app',
         data: {
             message: 'Hello Vue!',
+            message2: '',
             show: show,
             seen: true,
             listData: [
@@ -30,15 +31,33 @@ var app = new Vue({
                 }
             ]
         },
+        computed: {
+            messageLength1: function () {
+                console.log('Computed !');
+                return this.message.length;
+            }
+        },
         methods: {
             click: function () {
                 //this.listData.push('fff');
                 show.b = 'aaa';
                 show.age = 11;
+            },
+            messageLength2: function () {
+                console.log('Method !');
+                return this.message.length;
             }
         },
-        updated: function() {
-            console.log('Update啦啦啦');
+        filters: {
+            yellowFilter1: function(value, arg) {
+                return value + arg;
+            },
+            yellowFilter2: function (value, arg) {
+                return arg + value;
+            },
+            json: function (value) {
+                return JSON.stringify(value);
+            }
         }
     }
 );

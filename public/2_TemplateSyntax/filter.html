@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+
+
+<div id="app">
+    <p>message :
+    {{ message }}
+    </p>
+    <p>message after filter :
+    {{ message | prefix(prefixSymbol) | suffix(suffixSymbol) }}
+    </p>
+    Input Message: <input name="message" v-model="message"><br>
+    Prefix Symbol: <input name="prefixSymbol" v-model="prefixSymbol"><br>
+    Suffix Symbol: <input name="suffixSymbol" v-model="suffixSymbol"><br>
+</div>
+
+
+
+<script src="../../node_modules/vue/dist/vue.js"></script>
+<script src="./filter.js"></script>
+
+</body>
+</html>

@@ -7,10 +7,16 @@
 
 
 <div id="app">
+    <p>message 1:</p>
     {{ message }}
     <input name="message" v-model="message">
+    <br/>
+    <p>message 2:</p>
+    {{ message2 }}
+    <input name="message2" v-model="message2">
 
-    <p>{{ show }}</p>
+    <p>Computed: {{ message2 + messageLength1 }}</p>
+    <p>Method: {{ message2 + messageLength2() }}</p>
 
     <ul>
         <li v-for="item in listData">{{item}}</li>
