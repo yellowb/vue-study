@@ -10,12 +10,22 @@
     {{ message }}
     <input name="message" v-model="message">
 
-    <p v-if="seen">现在你看到我了</p>
+    <p>{{ show }}</p>
 
     <ul>
         <li v-for="item in listData">{{item}}</li>
     </ul>
+
+    <button v-on:click="click">哈哈</button>
+
+    <todo-item v-bind:todo="message"></todo-item>
+
+
+    <!--<ol>-->
+        <!--<todo-item v-for="item in todoList" v-bind:todo="item"></todo-item>-->
+    <!--</ol>-->
 </div>
+
 
 
 <script src="../node_modules/vue/dist/vue.js"></script>
