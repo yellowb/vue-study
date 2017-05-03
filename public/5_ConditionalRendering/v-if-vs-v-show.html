@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+
+<div id="app">
+    <h3>v-if VS v-show</h3>
+
+    <div id="even" v-if="num1 % 2 === 0">
+        This is even!
+    </div>
+    <div id="odd" v-else-if="num1 % 2 === 1">
+        This is odd!
+    </div>
+    <div id="shit" v-else>
+        This is shit!
+    </div>
+
+    <br/>
+    <span>input num1: </span>
+    <input v-model="num1">
+
+</div>
+
+<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+<script src="../../node_modules/vue/dist/vue.js"></script>
+<script src="./v-if-vs-v-show.js"></script>
+
+</body>
+</html>
