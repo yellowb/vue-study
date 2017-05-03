@@ -8,6 +8,8 @@
 <div id="app">
     <h3>v-if VS v-show</h3>
 
+    <span>v-if</span>
+
     <div id="even" v-if="num1 % 2 === 0">
         This is even!
     </div>
@@ -15,6 +17,20 @@
         This is odd!
     </div>
     <div id="shit" v-else>
+        This is shit!
+    </div>
+
+    <br/>
+
+    <span>v-show</span>
+
+    <div id="even-show" v-show="num1 % 2 === 0">
+        This is even!
+    </div>
+    <div id="odd-show" v-show="num1 % 2 === 1">
+        This is odd!
+    </div>
+    <div id="shit-show" v-show="isNaN(num1 % 2)">
         This is shit!
     </div>
 
