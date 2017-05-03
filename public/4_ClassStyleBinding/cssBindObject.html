@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+    <link rel="stylesheet" href="./cssBindObject.css" type="text/css">
+</head>
+
+<div id="app">
+    <h3>CSS Bind with object</h3>
+    <p :class="classObject">
+        Hello, my name is Tom!
+    </p>
+    <button @click="changeFont">font-italic: {{ classObject['font-italic'] ? 'on' : 'off' }}</button>
+    <button @click="changeBold">bold: {{ classObject['bold'] ? 'on' : 'off' }}</button>
+    <button @click="changeRed">red: {{ classObject['red'] ? 'on' : 'off' }}</button>
+
+</div>
+
+<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+<script src="../../node_modules/vue/dist/vue.js"></script>
+<script src="./cssBindObject.js"></script>
+
+</body>
+</html>
