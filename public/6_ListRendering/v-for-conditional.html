@@ -6,32 +6,27 @@
 </head>
 
 <div id="app">
-    <span> v-for </span>
+    <span> v-for with condition: age &gt; </span><input v-model="condition">
+
+    <!-- use v-if -->
     <ol>
-        <li v-for="(el, index) in people">
+        <li v-for="(el, index) in people" v-if="el.age > condition">
             {{ index }} -- {{ el.name }} -- {{ el.age }}
         </li>
     </ol>
 
-    <br/>
-    <span> v-for with template tag </span>
+    <!-- use computed to create a view -->
     <ol>
-        <template v-for="(el, index) in people">
-            <li>name: {{ el.name }}</li>
-        </template>
+        <li v-for="(el, index) in largerThen">
+            {{ index }} -- {{ el.name }} -- {{ el.age }}
+        </li>
     </ol>
-
-    <br/>
-    <span> v-for loop integer </span>
-    <div>
-        <span v-for="n in 10">{{ n }}</span>
-    </div>
 
 </div>
 
 <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
 <script src="../../node_modules/vue/dist/vue.js"></script>
-<script src="./v-for.js"></script>
+<script src="./v-for-conditional.js"></script>
 
 </body>
 </html>
