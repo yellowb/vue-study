@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+
+<div id="app">
+    <ol>
+        <li v-for="(el, index) in people">
+            {{ index }} -- {{ el.name }} -- {{ el.age }}
+        </li>
+    </ol>
+
+</div>
+
+<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+<script src="../../node_modules/vue/dist/vue.js"></script>
+<script src="./v-for.js"></script>
+
+</body>
+</html>
