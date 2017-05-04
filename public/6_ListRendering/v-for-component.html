@@ -19,6 +19,8 @@
                 v-on:remove="todos.splice(index, 1)"
         ></li>
     </ul>
+
+    <input @keyup.ctrl.enter.once="alert(0)">
 </div>
 
 <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>

@@ -21,6 +21,9 @@ new Vue({
         addNewTodo: function () {
             this.todos.push(this.newTodoText)
             this.newTodoText = ''
+        },
+        alert: function(v) {
+            alert(v);
         }
     }
 })
