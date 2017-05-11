@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+
+<div id="app">
+    <span> Props sample 1 </span>
+    <br/>
+
+    <!-- pass this value to child component -->
+    <input v-model="input">
+
+    <!-- child component, binding to parent's data -->
+    <my-com :props-name="input"></my-com>
+
+</div>
+
+<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+<script src="../../node_modules/vue/dist/vue.js"></script>
+<script src="./props1.js"></script>
+
+</body>
+</html>
