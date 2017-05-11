@@ -1,5 +1,8 @@
 var com = {
-    template: '<div> I am hero ! </div>'
+    template: '<div> I am {{ name }} ! </div>',
+    data: function () {
+        return {name: 'pig'};
+    }
 };
 
 var app = new Vue({
