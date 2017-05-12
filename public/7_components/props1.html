@@ -10,7 +10,7 @@
     <br/>
 
     <!-- pass this value to child component -->
-    <input v-model="input">
+    <span> Parent's value </span><input v-model="input">
 
     <!-- child component, binding to parent's data -->
     <my-com :props-name="input"></my-com>

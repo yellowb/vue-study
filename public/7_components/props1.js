@@ -1,11 +1,14 @@
 var com = {
-    template: '<div><div> I am {{ propsName }} ! ' +
+    template: '<div><div> I am [{{ propsName }}] ! (Click button will cause warning)' +
         '<button @click="addWarn">add-warn</button></div>' +
-        '<div> I am {{ localName }} ! ' +
+        '<div> I am [{{ localName }}] ! (Click button NO warning)' +
         '<button @click="addNoWarn">add-no-warn</button></div></div>',
-    props: [
-        'propsName'
-    ],
+    props: {
+        'propsName': {
+            type: String,
+            'default': 'no name'
+        }
+    },
     data: function() {
         return {
             // use a local variable to be init from props
